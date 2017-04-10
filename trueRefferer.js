@@ -14,8 +14,9 @@ function () {
   if (!trueDirect[1]) {
     trueDirect = (!refDomain[1]) ? "TrueDirect" : refDomain[1];
     if (trueDirect == document.domain) {
-      // only for sessions in the moment of implementation
-      trueDirect = "Own"
+      // Some sessions will be assigned TrueDirect in the moment of implementation,
+      // This will only affect active sessions
+      trueDirect = "TrueDirect"
     }
   } else {
     // rewrite cookie if there is non own domain refferal
